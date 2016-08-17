@@ -97,10 +97,13 @@ class UsersController < ApplicationController
     end
 end
 
+#add to User model ->  accepts_nested_attributes_for :orders, :allow_destroy => true
+
+#nested association order becomes orders_attributes in controller parameters and in json request.
+
+#id for orders_attributes should be present other wise it will create a new record.
 
 #pass this json for patch request in postman
-
-#id should be present other wise it will create a new record.
 
 # {
 #     "user": {
